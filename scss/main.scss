@@ -1,0 +1,127 @@
+@import 'configur';
+@import 'utilities';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    line-height: 1.5;
+    background: url(../images/pattern-background-desktop.jpg)no-repeat
+    center center/cover;
+    width: 100%;
+    max-width: 100%;
+    height: 35vh;
+    position: relative;
+}
+
+img,svg{
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+main{
+    padding: 3rem;
+    text-align: center;
+
+    h1, h3{
+        color: $dark-color;
+        font-weight: 900;
+    }
+
+    p{
+        color: $secondary-color;
+        font-weight: 500;
+    }
+
+    .lead{
+        margin-top: 1rem;
+    }
+
+    .price{
+        display: flex;
+        flex-direction: row;
+        margin: 2rem 0;
+        background: $main-color;
+        padding: 1rem;
+        border-radius: 10px;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+
+        .first{
+            display: flex;
+            align-items: center;
+            justify-content:center;
+        }
+
+        .name{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            white-space: nowrap;
+
+            h3{
+                display: inline-block;
+                margin-left: 1rem;
+            }
+            }
+
+        a.change{
+            color: $primary-color;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.5s;
+
+            &:hover{
+                color: $secondary-color;
+            }
+        }
+    }
+
+    .btn{
+        display: inline-block;
+        padding: 1.2rem 2rem;
+        width: 100%;
+        background: $primary-color;
+        color: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.5s;
+
+        &:hover{
+            background: $secondary-color;
+        }
+    }
+
+    .order{
+        padding-top: 2.5rem ;
+        display: inline-block;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover{
+            color: $dark-color;
+        }
+    }
+}
+
+
+@media(max-width:375px){
+    body{
+        background: url(../images/pattern-background-mobile.jpg);
+    }
+}
+
